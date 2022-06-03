@@ -1,1 +1,1 @@
-# FriendComments
+# FriendThoughts

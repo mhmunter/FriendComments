@@ -1,87 +1,87 @@
-const { Schema, model, Types } = require('mongoose');
-const dateFormat = require('../utils/dateFormat');
+const { Schema, model, Types } = require("mongoose");
+const dateFormat = require("../utils/dateFormat");
 
-const ReplySchema = new Schema(
+const ReactionSchema = new Schema(
   {
-    // set custom id to avoid confusion with parent comment _id
-    replyId: {
+    // set custom id to avoid confusion with parent thought _id
+    reactionId: {
       type: Schema.Types.ObjectId,
-      default: () => new Types.ObjectId()
+      default: () => new Types.ObjectId(),
     },
-    replyBody: {
+    reactionBody: {
       type: String,
-      required: true
+      required: true,
     },
     writtenBy: {
       type: String,
       required: true,
-      trim: true
+      trim: true,
     },
     createdAt: {
       type: Date,
       default: Date.now,
-      get: createdAtVal => dateFormat(createdAtVal)
-    }
+      get: (createdAtVal) => dateFormat(createdAtVal),
+    },
   },
   {
     toJSON: {
-      getters: true
-    }
+      getters: true,
+    },
   }
 );
 
-const CommentSchema = new Schema(
+const ThoughtSchema = new Schema(
   {
     writtenBy: {
       type: String,
-      required: true
+      required: true,
     },
-    commentBody: {
+    thoughtBody: {
       type: String,
-      required: true
+      required: true,
     },
     createdAt: {
       type: Date,
       default: Date.now,
-      get: createdAtVal => dateFormat(createdAtVal)
+      get: (createdAtVal) => dateFormat(createdAtVal),
     },
-    // use ReplySchema to validate data for a reply
+    // use ReactionSchema to validate data for a reaction
     // {
-    // set custom id to avoid confusion with parent comment _id
-  //   replyId: {
-  //     type: Schema.Types.ObjectId,
-  //     default: () => new Types.ObjectId()
-  //   },
-  //   replyBody: {
-  //     type: String,
-  //     required: true
-  //   },
-  //   writtenBy: {
-  //     type: String,
-  //     required: true,
-  //     trim: true
-  //   },
-  //   createdAt: {
-  //     type: Date,
-  //     default: Date.now,
-  //     get: createdAtVal => dateFormat(createdAtVal)
-  //   }
-  // },
-    replies: [ReplySchema]
+    // set custom id to avoid confusion with parent thought _id
+    //   reactionId: {
+    //     type: Schema.Types.ObjectId,
+    //     default: () => new Types.ObjectId()
+    //   },
+    //   reactionBody: {
+    //     type: String,
+    //     required: true
+    //   },
+    //   writtenBy: {
+    //     type: String,
+    //     required: true,
+    //     trim: true
+    //   },
+    //   createdAt: {
+    //     type: Date,
+    //     default: Date.now,
+    //     get: createdAtVal => dateFormat(createdAtVal)
+    //   }
+    // },
+    reactions: [ReactionSchema],
   },
   {
     toJSON: {
       virtuals: true,
-      getters: true
+      getters: true,
     },
-    id: false
+    id: false,
   }
 );
 
-CommentSchema.virtual('replyCount').get(function() {
-  return this.replies.length;
+ThoughtSchema.virtual("reactionCount").get(function () {
+  return this.reactions.length;
 });
 
-const Comment = model('Comment', CommentSchema);
+const Thought = model("Thought", ThoughtSchema);
 
-module.exports = Comment;
+module.exports = Thought;
