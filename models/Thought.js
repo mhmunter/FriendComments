@@ -45,7 +45,7 @@ username: {
     type: String,
     required: true
 },
-reactions: [reactionSchema]
+reactions: [ReactionSchema]
  },
  {
     toJSON: {
@@ -55,10 +55,10 @@ reactions: [reactionSchema]
     id: false
   }
 );
-reactionCountSchema.virtual('reactionCount').get(function() {
+ThoughtSchema.virtual('reactionCount').get(function() {
     return this.reactionCount.length;
   });
 
-  const Thought = model('Thought ', Thought Schema);
+  const Thought = model('Thought', ThoughtSchema);
 
 module.exports = Thought;
