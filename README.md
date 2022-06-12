@@ -28,4 +28,4 @@
 [watch install video](https://drive.google.com/file/d/1c77gm3lqM3CfuQqOGAVo5VaY7bHfYSaI/view)
 
 ## **Questions:**
-Any questions should be directed to mhmunter@yahoo.com
+Any questions should be directed to mhmunter@yahoo.com or https://github.com/mhmunter/FriendCommentsConnection
