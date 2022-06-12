@@ -14,13 +14,13 @@
 
 
 ## Discription: 
-- A backend program that will add and delete users friends, and comments. 
+- A backend program that will add and delete and update users friends, and thoughts or comments. 
 
 ## **Usage** 
 <ol>
  <li> click on install link</li>
 <li>then open zip file, or view file</li>
-<li> click on view file raw to watch vedio</li>
+<li> click on Link to watch install vedio</li>
 
  </ol>
  
