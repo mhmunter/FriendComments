@@ -1,4 +1,4 @@
-# **TheOfficeGenerator**
+# **FriendCommentsConnectionr**
 
 ## Table of Contents
 [Discription](#Discription)
@@ -7,19 +7,18 @@
 
 [Installation](#installation)
 
-[Link](#Link)
+[Video](#Video)
 
 [Questions](#Questions)
 
 
 
 ## Discription: 
-- A program that will use command line to prompt user to input information, and use that input to add/update office employee data. 
+- A backend program that will add and delete users friends, and comments. 
 
 ## **Usage** 
 <ol>
  <li> click on install link</li>
-<li> or click on Untitled_ May 1, 2022 4_46 PM.mp4</li>
 <li>then open zip file, or view file</li>
 <li> click on view file raw to watch vedio</li>
 
@@ -29,4 +28,4 @@
 [watch install video](https://drive.google.com/file/d/1c77gm3lqM3CfuQqOGAVo5VaY7bHfYSaI/view)
 
 ## **Questions:**
-mhmunter@yahoo.com
+Any questions should be directed to mhmunter@yahoo.com
